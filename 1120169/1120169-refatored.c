@@ -10,14 +10,16 @@ typedef int u32;
 static void btreeHeapInsert(u32 *aHeap, u32 x){
 
   u32 j, i = ++aHeap[0];
-  printf("%d\n\n", i);
   aHeap[i] = x;
 
-  while( (j = i/2)>0 && aHeap[j]>aHeap[i] ){
+  j = i/2;
+  while( j > 0 && aHeap[j]>aHeap[i] ){
+
     x = aHeap[j];
     aHeap[j] = aHeap[i];
     aHeap[i] = x;
-    i = j;
+
+    j /= 2;
   }
 
 }
@@ -27,13 +29,16 @@ static void btreeHeapInsert(u32 *aHeap, u32 x){
 void main(){
 
 //iniciado dados necessarios
-	int n = 10;
+	int n;
+  printf("Tamanho: "); scanf("%d", &n);
+
 	u32 *aHeap = (u32 *) malloc(n * sizeof(u32));
-	for(int i = 0; i < n; i++) aHeap[i] = i*2;
+
+	printf("%d Entradas: \n", n);
+  for(int i = 0; i < n; i++) scanf("%d\n", &aHeap[i]);
 
 	btreeHeapInsert(aHeap, 188);
 
-	for(int i = 0; i < n; i++) printf("%d\n", aHeap[i]);
-
-
+  printf("Saida:\n");
+  for(int i = 0; i < n; i++) printf("%d\n", aHeap[i]);
 }
