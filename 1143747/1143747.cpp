@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 static int getseword(struct protstream *prot, char *buf, int maxlen){
 
     int c = EOF;
