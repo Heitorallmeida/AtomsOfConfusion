@@ -13,7 +13,6 @@ char_u * vim_strchr(char_u * name, char x){
 	else return NULL;
 }
 
-
     static char_u *
 make_pull_name(char_u * name)
 {
@@ -29,7 +28,6 @@ make_pull_name(char_u * name)
     }
     return pname;
 }
-
 
 int main(){
 

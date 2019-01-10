@@ -45,7 +45,7 @@ int main(){
 	char mf[6] = "teste";
 
 	long int teste = xdl_guess_lines(mf, sample);
-
+	cout << teste;
 
 	return 0;
 }
