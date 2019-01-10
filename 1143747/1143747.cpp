@@ -12,7 +12,6 @@ char prot_getc(char *prot, int maxlen)
     int quoted;
 
     c = prot_getc(prot, maxlen--);
-    cout << (char) c << endl;
     if (c == '"')
         quoted = 1;
     else
@@ -24,7 +23,6 @@ char prot_getc(char *prot, int maxlen)
                (c != '"') :
                (c != ' ' && c != ')'))) {
         *buf++ = c;
-    cout << (char) c << endl;
         maxlen--;
     }
     *buf = '\0';
