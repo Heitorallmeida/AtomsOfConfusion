@@ -4,13 +4,13 @@ using namespace std;
 typedef char mmfile_t;
 
 mmfile_t *xdl_mmfile_first(mmfile_t *mf, long *size){
-	*size = 1;
-	mf++;
+	*size = 25;
 	return mf;
 }
 
 char *memchr(char const *cur, char x, long n){
 	x = 0;
+	return cur;
 }
 
 long int xdl_mmfile_size(char *mf){
@@ -41,8 +41,9 @@ long int xdl_guess_lines(mmfile_t *mf, long int sample) {
 
 int main(){
 
-	long sample = 5; 
-	char mf[6] = "teste";
+	long int sample;
+	cin >> sample;
+	char mf[8] = "teste";
 
 	long int teste = xdl_guess_lines(mf, sample);
 	cout << teste;
